@@ -1,0 +1,25 @@
+﻿@using YYLB.Models;
+@model IEnumerable<Product>
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ShowAllTheProducts</title>
+</head>
+<body>
+    <div> 
+        @*这边是视图相关的razor语法，需要涉及到C#代码的要用@标识*@
+
+        <table>
+            @{ 
+                foreach (Product item in Model) {
+                    <tr>
+                        <td>@item.ProductName</td><td>@item.Price</td>
+                    </tr>
+                }
+            }
+        </table>
+    </div>
+</body>
+</html>
